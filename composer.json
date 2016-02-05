@@ -3,7 +3,6 @@
         "symfony/config": "^3.0",
         "symfony/yaml": "^3.0",
         "symfony/filesystem": "^3.0",
-        "propel/propel1": "^1.7"
     },
     "autoload": {
         "psr-4": {

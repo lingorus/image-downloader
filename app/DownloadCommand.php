@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Config\Config;
 use App\Queue\DoneQueue;
 use App\Queue\DownloadQueue;
 use App\Queue\FailedQueue;
@@ -28,6 +29,7 @@ class DownloadCommand implements Command
     }
 
     private function download($url){
+        $emageDir = Config::getConfig()->getParam('images_dir');
         $path_parts = pathinfo($url);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_POST, 0);
@@ -37,7 +39,7 @@ class DownloadCommand implements Command
         $result = curl_exec($ch);
         if ($result){
             $extension = self::getExtensionByMimeType(curl_getinfo($ch, CURLINFO_CONTENT_TYPE));
-            $saveFile = fopen('images/' . $path_parts['filename'] . '(' . uniqid() . ')' . '.' . $extension , 'w');
+            $saveFile = fopen($emageDir .'/'. $path_parts['filename'] . '(' . uniqid() . ')' . '.' . $extension , 'w');
             fwrite($saveFile, $result);
             fclose($saveFile);
         }

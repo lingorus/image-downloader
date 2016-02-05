@@ -6,3 +6,4 @@ db:
   password: test
   charset: UTF8
 queue_handler: App\Queue\Handler\DbQueueHandler
+images_dir: images

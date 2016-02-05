@@ -9,6 +9,6 @@
 6. Test your application `./bot schedule test.txt` with test file or use your own file.
 
 ##Description
-This application work according to description `technical_description.pdf`.
+This application works according to the description that you can find in the root of application: `technical_description.pdf`.
 
 

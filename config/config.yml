@@ -1,0 +1,8 @@
+db:
+  host: 127.0.0.1
+  port: 3306
+  db_name: test_der_traktor
+  user: root
+  password: bafst72g
+  charset: UTF8
+queue_handler: App\Queue\Handler\DbQueueHandler

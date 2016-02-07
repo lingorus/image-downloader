@@ -9,4 +9,10 @@
 ##Description
 This application works according to the description that you can find in the root of application: `technical_description.pdf`.
 
+##Configuration
 
+1. It is possible to change the storage for the queue.
+To do this, you must write a handler class implementing QueueHandlerInterface and specify it in the configuration file.
+`queue_handler: App\Queue\Handler\DbQueueHandler`
+2. It is possible to change the directory for downloaded images.
+`images_dir: images`

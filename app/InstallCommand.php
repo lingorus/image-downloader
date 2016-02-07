@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+
 use App\Db\Db;
 
 /**
@@ -21,10 +22,10 @@ class InstallCommand implements Command
                     ENGINE=MyISAM;
                     '
         );
-	if ($res !== false ){
-		echo "application installed\n\r";
-	} else {
-		echo "Something went wrong. Check the configuration.\n\r";
-	}
+        if ($res !== false ){
+            echo "application installed\n\r";
+        } else {
+            echo "Something went wrong. Check the configuration.\n\r";
+        }
     }
 }

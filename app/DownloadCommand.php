@@ -8,7 +8,6 @@ use App\Queue\DownloadQueue;
 use App\Queue\FailedQueue;
 use Symfony\Component\Config\Definition\Exception\Exception;
 
-
 /**
  * Class DownloadCommand
  * @package App

@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+
 use App\Config\Config;
 use App\Queue\DownloadQueue;
 use App\Queue\QueueElement;
